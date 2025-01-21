@@ -15,7 +15,6 @@ test("focusing the button triggers console output", () => {
 
   const button = screen.queryByText(/Eyes on me/);
   fireEvent.focus(button);
-
   expect(console.log).toHaveBeenCalled();
   expect(console.log.mock.calls[0][0]).toBe("Good!");
 });
